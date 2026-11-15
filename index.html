@@ -1,0 +1,195 @@
+<title>Hype Shop</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Montserrat:wght@800;900&display=swap">
+<style>
+/* Layout: a parcel on its way. Poly-mailer grey ground, one hazard-orange shipping label as the hero object, everything else quiet. */
+:root{
+  --bg:#e4e6ec; --surface:#f5f6f9; --ink:#14182b; --muted:#565c75; --line:#c3c7d4;
+  --accent:#ff5a1f; --accent-ink:#14182b; --label:#fffdf8; --label-ink:#14182b;
+  --display:"Montserrat","Arial Black",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10131f; --surface:#191d2e; --ink:#eef0f7; --muted:#9aa1bb; --line:#2e344b;
+  --accent:#ff6a33; --accent-ink:#14182b; --label:#f3efe6; --label-ink:#14182b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10131f; --surface:#191d2e; --ink:#eef0f7; --muted:#9aa1bb; --line:#2e344b;
+  --accent:#ff6a33; --accent-ink:#14182b; --label:#f3efe6; --label-ink:#14182b; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:18px}
+.logo{font:900 1.15rem/1 var(--display);letter-spacing:-.01em;text-decoration:none}
+.logo span{color:var(--accent)}
+.langs{display:flex;gap:4px;border:1px solid var(--line);border-radius:999px;padding:3px}
+.langs button{font:700 .75rem var(--mono);background:none;border:0;color:var(--muted);padding:6px 11px;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:40px 72px}
+.hero > .wrap > *{min-width:0}
+.route{color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.route i{flex:0 0 36px;height:2px;background:var(--accent)}
+h1{font:900 clamp(2.2rem,6.2vw,4.4rem)/1.02 var(--display);letter-spacing:-.03em;margin:18px 0 20px;text-wrap:balance;overflow-wrap:break-word}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font:600 1rem var(--body);text-decoration:none;padding:14px 22px;border-radius:6px;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}}
+
+.label{background:var(--label);color:var(--label-ink);border:2px solid var(--label-ink);padding:18px;transform:rotate(2.5deg);max-width:340px;justify-self:center;width:100%;box-shadow:10px 10px 0 var(--accent)}
+.label .row{display:grid;grid-template-columns:1fr 1fr;border-bottom:2px solid var(--label-ink)}
+.label .cell{padding:10px 0}
+.label .cell + .cell{border-left:2px solid var(--label-ink);padding-left:12px}
+.label small{display:block;font:500 .65rem var(--mono);letter-spacing:.1em;opacity:.65}
+.label b{font:900 1.25rem/1.15 var(--display);display:block}
+.label .code{padding:14px 0;border-bottom:2px solid var(--label-ink)}
+.label .code b{font-size:2.4rem;letter-spacing:.04em}
+.bars{height:54px;margin-top:14px;background:repeating-linear-gradient(90deg,var(--label-ink) 0 3px,transparent 3px 5px,var(--label-ink) 5px 6px,transparent 6px 10px,var(--label-ink) 10px 14px,transparent 14px 16px)}
+.label .foot{display:flex;justify-content:space-between;font:500 .65rem var(--mono);margin-top:6px;letter-spacing:.1em}
+
+section{border-top:1px solid var(--line)}
+section .wrap{padding-block:56px}
+h2{font:800 clamp(1.5rem,3.4vw,2.2rem)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 28px;text-wrap:balance}
+.perks{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 48px}
+.perks h3,.steps h3{font:600 1.1rem var(--body);margin:0 0 4px}
+.perks p,.steps p{margin:0;color:var(--muted);max-width:32em}
+.perks div{border-left:3px solid var(--accent);padding-left:16px;min-width:0}
+
+.cats{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.cats li{font:800 clamp(1.1rem,2.6vw,1.6rem) var(--display);padding:12px 20px;border:2px solid var(--ink);border-radius:999px}
+.cats li:nth-child(2){background:var(--ink);color:var(--bg)}
+.cats li:nth-child(3){background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;min-width:0}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 .8rem var(--mono);color:var(--accent);display:block;border-top:2px solid var(--ink);padding-top:10px;margin-bottom:10px}
+
+.contact{background:var(--surface)}
+.contact .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.contact h2{margin:0 0 6px}
+.handle{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted)}
+.handle code{font:700 1rem var(--mono);color:var(--ink);user-select:all}
+.copy{font:700 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;background:none;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:6px 10px;cursor:pointer}
+footer .wrap{padding-block:20px;color:var(--muted);font-size:.85rem}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:20px 56px}
+  .label{transform:rotate(1.5deg);box-shadow:6px 6px 0 var(--accent)}
+  .perks{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:420px){.steps{grid-template-columns:1fr}}
+</style>
+
+<header><div class="wrap">
+  <a class="logo" href="#top" id="top">HYPE<span>SHOP</span></a>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" id="lang-az" data-lang="az">AZ</button>
+    <button type="button" id="lang-ru" data-lang="ru">RU</button>
+    <button type="button" id="lang-en" data-lang="en">EN</button>
+  </div>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="route mono"><span>Guangzhou</span><i></i><span data-i="city">Bakı</span></div>
+    <h1 data-i="h1"></h1>
+    <p class="lead" data-i="lead"></p>
+    <div class="cta">
+      <a class="btn primary" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener" data-i="cta1"></a>
+      <a class="btn" href="https://www.instagram.com/hypeshopexpress/" target="_blank" rel="noopener" data-i="cta2"></a>
+    </div>
+  </div>
+  <div class="label" aria-hidden="true">
+    <div class="row">
+      <div class="cell"><small>FROM</small><b>GUANGZHOU</b></div>
+      <div class="cell"><small>TO</small><b data-i="cityUp">BAKI</b></div>
+    </div>
+    <div class="code"><small data-i="codeLbl"></small><b>CASE</b></div>
+    <div class="bars"></div>
+    <div class="foot"><span>HYPE SHOP</span><span>@hypeshopexpress</span></div>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2 data-i="whyT"></h2>
+  <div class="perks">
+    <div><h3 data-i="p1t"></h3><p data-i="p1d"></p></div>
+    <div><h3 data-i="p2t"></h3><p data-i="p2d"></p></div>
+    <div><h3 data-i="p3t"></h3><p data-i="p3d"></p></div>
+    <div><h3 data-i="p4t"></h3><p data-i="p4d"></p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i="catT"></h2>
+  <ul class="cats">
+    <li data-i="c1"></li><li data-i="c2"></li><li data-i="c3"></li><li data-i="c4"></li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i="howT"></h2>
+  <ol class="steps">
+    <li><h3 data-i="s1t"></h3><p data-i="s1d"></p></li>
+    <li><h3 data-i="s2t"></h3><p data-i="s2d"></p></li>
+    <li><h3 data-i="s3t"></h3><p data-i="s3d"></p></li>
+    <li><h3 data-i="s4t"></h3><p data-i="s4d"></p></li>
+  </ol>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <div>
+    <h2 data-i="askT"></h2>
+    <div class="handle"><span>Instagram:</span><code id="handle">@hypeshopexpress</code>
+      <button type="button" class="copy" id="copy" data-i="copy"></button></div>
+  </div>
+  <a class="btn primary" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener" data-i="cta1"></a>
+</div></section>
+</main>
+
+<footer><div class="wrap">Hype Shop · Guangzhou → <span data-i="city">Bakı</span></div></footer>
+
+<script>
+const T={
+az:{city:"Bakı",cityUp:"BAKI",h1:"Trend məhsullar <em>birbaşa Çindən</em>",lead:"Mağazalara hələ çatmamış qadcetlər və aksesuarlar. Qiyməti çatdırılma ilə birlikdə dərhal deyirik.",cta1:"Instagram-da yaz",cta2:"Roliklərə bax",codeLbl:"KOD SÖZÜ · NÜMUNƏ",
+whyT:"Niyə Hype Shop",p1t:"Qiymət çatdırılma ilə",p1d:"Dediyimiz məbləğə çatdırılma artıq daxildir.",p2t:"Yeniliklər əvvəlcə bizdə",p2d:"Çində yenicə çıxan məhsulları seçib gətiririk.",p3t:"Cavab direktdə",p3d:"Kod sözünü yaz, qiyməti və sifariş linkini direktə göndərək.",p4t:"Azərbaycan və dünya üzrə",p4d:"Azərbaycana və başqa ölkələrə çatdırırıq.",
+catT:"Nə gətiririk",c1:"Qadcetlər",c2:"Telefon aksesuarları",c3:"Ev üçün",c4:"Avtomobil üçün",
+howT:"Necə sifariş etmək olar",s1t:"Rolikə bax",s1d:"Hər məhsulun rolikində öz kod sözü var.",s2t:"Kod sözünü yaz",s2d:"Şərhdə və ya direktdə.",s3t:"Qiyməti al",s3d:"Çatdırılma daxil qiyməti və sifariş linkini göndəririk.",s4t:"Bağlamanı qəbul et",s4d:"Sifarişi ünvanına çatdırırıq.",
+askT:"Sualın var? Yaz.",copy:"Kopyala",copied:"Kopyalandı"},
+ru:{city:"Баку",cityUp:"БАКУ",h1:"Трендовые товары <em>напрямую из Китая</em>",lead:"Гаджеты и аксессуары, которых ещё нет в магазинах. Цену называем сразу с доставкой.",cta1:"Написать в Instagram",cta2:"Смотреть ролики",codeLbl:"КОДОВОЕ СЛОВО · ПРИМЕР",
+whyT:"Почему Hype Shop",p1t:"Цена с доставкой",p1d:"В названную сумму уже входит доставка.",p2t:"Новинки раньше магазинов",p2d:"Отбираем товары, которые только появились в Китае.",p3t:"Ответ в директ",p3d:"Напиши кодовое слово — пришлём цену и ссылку на заказ.",p4t:"Азербайджан и весь мир",p4d:"Доставляем по Азербайджану и в другие страны.",
+catT:"Что привозим",c1:"Гаджеты",c2:"Аксессуары для телефона",c3:"Для дома",c4:"Для авто",
+howT:"Как заказать",s1t:"Посмотри ролик",s1d:"В ролике каждого товара есть своё кодовое слово.",s2t:"Напиши кодовое слово",s2d:"В комментариях или в директ.",s3t:"Получи расчёт",s3d:"Пришлём цену с доставкой и ссылку на заказ.",s4t:"Получи посылку",s4d:"Доставим заказ по твоему адресу.",
+askT:"Есть вопрос? Напиши.",copy:"Копировать",copied:"Скопировано"},
+en:{city:"Baku",cityUp:"BAKU",h1:"Trending products <em>straight from China</em>",lead:"Gadgets and accessories that haven't reached the shops yet. The price we quote already includes delivery.",cta1:"Message us on Instagram",cta2:"Watch the reels",codeLbl:"CODE WORD · EXAMPLE",
+whyT:"Why Hype Shop",p1t:"Price includes delivery",p1d:"The amount we quote already covers delivery.",p2t:"New arrivals first",p2d:"We pick products that have only just launched in China.",p3t:"Answers by DM",p3d:"Send the code word and we reply with the price and an order link.",p4t:"Azerbaijan and worldwide",p4d:"We deliver across Azerbaijan and to other countries.",
+catT:"What we bring",c1:"Gadgets",c2:"Phone accessories",c3:"For home",c4:"For the car",
+howT:"How to order",s1t:"Watch the reel",s1d:"Each product reel has its own code word.",s2t:"Send the code word",s2d:"In the comments or by DM.",s3t:"Get the price",s3d:"We send the delivered price and an order link.",s4t:"Receive your parcel",s4d:"We deliver the order to your address.",
+askT:"Got a question? Message us.",copy:"Copy",copied:"Copied"}};
+let lang="az";
+try{const s=localStorage.getItem("hs-lang");if(T[s])lang=s}catch(e){}
+function render(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[lang][el.dataset.i];if(v!=null)el.innerHTML=v});
+  document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+}
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{
+  lang=b.dataset.lang;try{localStorage.setItem("hs-lang",lang)}catch(e){}render()}));
+document.getElementById("copy").addEventListener("click",e=>{
+  const btn=e.currentTarget,h=document.getElementById("handle");
+  const done=()=>{btn.textContent=T[lang].copied;setTimeout(()=>btn.textContent=T[lang].copy,1500)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(h);const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  try{navigator.clipboard.writeText(h.textContent).then(done,sel)}catch(err){sel()}
+});
+render();
+</script>
