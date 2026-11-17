@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Hype Shop","url":"https://hypeshop.az/","logo":"https://hypeshop.az/apple-touch-icon.png","image":"https://hypeshop.az/og.jpg","address":{"@type":"PostalAddress","addressLocality":"Bakı","addressCountry":"AZ"},"sameAs":["https://www.instagram.com/hypeshopexpress/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Hype Shop","url":"https://hypeshop.az/","logo":"https://hypeshop.az/apple-touch-icon.png","image":"https://hypeshop.az/og.jpg","address":{"@type":"PostalAddress","addressLocality":"Bakı","addressCountry":"AZ"},"telephone":"+994553536212","sameAs":["https://www.instagram.com/hypeshopexpress/","https://wa.me/994553536212"]}</script>
 <style>
 :root{--bg:#0b0d17;--bg2:#12152a;--card:#151933;--ink:#f4f5fb;--muted:#a3a8c3;--line:rgba(255,255,255,.1);--acc:#ff5a1f;--acc2:#ff8a4c;--burg:#8e2a4f;--r:22px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -31,7 +31,9 @@ a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}img{
 .btn:hover{transform:translateY(-2px)}
 .btn.pri{background:var(--acc);border-color:var(--acc);color:#0b0d17}
 .btn.pri:hover{background:var(--acc2)}
-.btn svg{width:18px;height:18px}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.wa{background:#25d366;border-color:#25d366;color:#06130b}.btn.wa:hover{background:#3ee07c}
+.wa-fab{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}.wa-fab svg{width:30px;height:30px}
 .eyebrow{font:700 12px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
 h1,h2,h3{margin:0;letter-spacing:-.025em;line-height:1.05}
 h2{font-size:clamp(30px,4.4vw,48px);font-weight:900;margin:12px 0 14px}
@@ -148,8 +150,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <h1 data-i="h1">Yeni trendlər <em>hamıdan əvvəl</em></h1>
   <p class="sub" data-i="lead">Arxa sensor ekranlı keys: iPhone-un ekranı arxada da görünür. Əsas kamerayla selfi çək, özünü kadrda gör.</p>
   <div class="cta">
-   <a class="btn pri" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg><span data-i="cta1">Direct-ə yaz</span></a>
-   <a class="btn" href="#cases" data-i="cta2">Keyslərə bax</a>
+   <a class="btn pri wa" href="https://wa.me/994553536212" data-wa="" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg><span data-i="cta1">WhatsApp-a yaz</span></a>
+   <a class="btn" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg><span data-i="ctaDm">Direct-ə yaz</span></a>
   </div>
  </div>
  <div class="stage" aria-hidden="true">
@@ -168,7 +170,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <h3>iPhone 18 Pro Max</h3>
     <div class="clr" style="--sw:#7a2343"><i></i>Burgundy</div>
     <ul><li data-i="f1s">Sensor arxa ekran</li><li data-i="f2s">Əsas kamerayla selfi</li><li data-i="f3s">Maqnitli LED · 3 rejim</li><li data-i="f4s">Güzgü düyməsi</li></ul>
-    <a class="btn pri" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener" data-i="order">Sifariş et</a>
+    <a class="btn pri" href="https://wa.me/994553536212" data-wa="iPhone 18 Pro Max — Burgundy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg><span data-i="order">WhatsApp-da sifariş et</span></a>
    </div>
   </article>
   <article class="prod o">
@@ -178,7 +180,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <h3>iPhone 17 Pro Max</h3>
     <div class="clr" style="--sw:#ff6a2e"><i></i>Cosmic Orange</div>
     <ul><li data-i="f1s">Sensor arxa ekran</li><li data-i="f2s">Əsas kamerayla selfi</li><li data-i="f3s">Maqnitli LED · 3 rejim</li><li data-i="f4s">Güzgü düyməsi</li></ul>
-    <a class="btn pri" href="https://ig.me/m/hypeshopexpress" target="_blank" rel="noopener" data-i="order">Sifariş et</a>
+    <a class="btn pri" href="https://wa.me/994553536212" data-wa="iPhone 17 Pro Max — Cosmic Orange" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg><span data-i="order">WhatsApp-da sifariş et</span></a>
    </div>
   </article>
  </div>
@@ -203,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  <div class="head"><span class="eyebrow" data-i="e4">Sifariş</span><h2 data-i="t4">Necə sifariş etmək olar</h2></div>
  <ol class="steps">
   <li><h3 data-i="s1">Modeli seç</h3><p data-i="s1d">iPhone 18 Pro Max — Burgundy və ya iPhone 17 Pro Max — Cosmic Orange.</p></li>
-  <li><h3 data-i="s2">Direct-ə yaz</h3><p data-i="s2d">@hypeshopexpress-ə modeli yaz — qiyməti dərhal deyirik.</p></li>
+  <li><h3 data-i="s2">WhatsApp və ya Direct-ə yaz</h3><p data-i="s2d">+994 55 353 62 12 nömrəsinə və ya @hypeshopexpress-ə modeli yaz — qiyməti dərhal deyirik.</p></li>
   <li><h3 data-i="s3">Sifarişi təsdiqlə</h3><p data-i="s3d">Detalları razılaşdırırıq və keysin sənə çatmasını təşkil edirik.</p></li>
  </ol>
 </div></section>
@@ -212,25 +214,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
  <span class="eyebrow" data-i="e5">Tezliklə</span>
  <h2 data-i="t5">Yeni məhsullar yoldadır</h2>
  <p class="sub" data-i="d5">Hype Shop-da trend qadcetlər və aksesuarlar mağazalardan əvvəl çıxır. İzlə ki, qaçırmayasan.</p>
- <div class="cta"><a class="btn pri" href="https://www.instagram.com/hypeshopexpress/" target="_blank" rel="noopener" data-i="follow">@hypeshopexpress-i izlə</a></div>
+ <div class="cta"><a class="btn pri wa" href="https://wa.me/994553536212" data-wa="" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg><span data-i="cta1">WhatsApp-a yaz</span></a><a class="btn" href="https://www.instagram.com/hypeshopexpress/" target="_blank" rel="noopener" data-i="follow">@hypeshopexpress-i izlə</a></div>
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Hype Shop · Bakı</span><a href="https://www.instagram.com/hypeshopexpress/" target="_blank" rel="noopener">Instagram @hypeshopexpress</a></div></footer>
+<a class="wa-fab" href="https://wa.me/994553536212" data-wa="" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg></a>
+<footer><div class="wrap"><span>© 2026 Hype Shop · Bakı · <a href="tel:+994553536212">+994 55 353 62 12</a></span><a href="https://www.instagram.com/hypeshopexpress/" target="_blank" rel="noopener">Instagram @hypeshopexpress</a></div></footer>
 
 <script>
 const T={
-ru:{pill:"iPhone 18 Pro Max · iPhone 17 Pro Max",h1:"Новинки и хайп <em>раньше всех</em>",lead:"Чехол с сенсорным экраном сзади: экран iPhone повторяется на задней стороне. Снимай селфи на основную камеру и видь себя в кадре.",cta1:"Написать в Direct",cta2:"Смотреть чехлы",
-e1:"В наличии",t1:"Чехол с экраном сзади",d1:"Две модели, два цвета. Обе в наличии в Баку.",stock:"В наличии",f1s:"Сенсорный экран сзади",f2s:"Селфи на основную камеру",f3s:"Магнитный LED · 3 режима",f4s:"Кнопка зеркала",order:"Заказать",
+ru:{pill:"iPhone 18 Pro Max · iPhone 17 Pro Max",h1:"Новинки и хайп <em>раньше всех</em>",lead:"Чехол с сенсорным экраном сзади: экран iPhone повторяется на задней стороне. Снимай селфи на основную камеру и видь себя в кадре.",cta1:"Написать в WhatsApp",ctaDm:"Написать в Direct",cta2:"Смотреть чехлы",
+e1:"В наличии",t1:"Чехол с экраном сзади",d1:"Две модели, два цвета. Обе в наличии в Баку.",stock:"В наличии",f1s:"Сенсорный экран сзади",f2s:"Селфи на основную камеру",f3s:"Магнитный LED · 3 режима",f4s:"Кнопка зеркала",order:"Заказать в WhatsApp",
 e2:"Функции",t2:"Всё в одном чехле",f1:"Сенсорный экран сзади",f1d:"Экран iPhone повторяется сзади: управляй и видь кадр.",f2:"Селфи на основную камеру",f2d:"Не фронталка, а лучшая камера телефона — разница в качестве сразу видна.",f3:"Магнитный LED-свет",f3d:"3 режима света. Чёткий кадр даже ночью.",f4:"Кнопка зеркала",f4d:"Одно касание — и задний экран превращается в зеркало.",
 e3:"На видео",t3:"Посмотри, как это работает",d3:"Экран iPhone сзади, магнитный LED и режим зеркала — за 25 секунд.",more:"Больше в Instagram",
-e4:"Заказ",t4:"Как заказать",s1:"Выбери модель",s1d:"iPhone 18 Pro Max — Burgundy или iPhone 17 Pro Max — Cosmic Orange.",s2:"Напиши в Direct",s2d:"Напиши модель в @hypeshopexpress — сразу назовём цену.",s3:"Подтверди заказ",s3d:"Согласуем детали и организуем, чтобы чехол дошёл до тебя.",
+e4:"Заказ",t4:"Как заказать",s1:"Выбери модель",s1d:"iPhone 18 Pro Max — Burgundy или iPhone 17 Pro Max — Cosmic Orange.",s2:"Напиши в WhatsApp или Direct",s2d:"Напиши модель на +994 55 353 62 12 или в @hypeshopexpress — сразу назовём цену.",s3:"Подтверди заказ",s3d:"Согласуем детали и организуем, чтобы чехол дошёл до тебя.",
 e5:"Скоро",t5:"Новые товары уже в пути",d5:"В Hype Shop трендовые гаджеты и аксессуары появляются раньше, чем в магазинах. Подпишись, чтобы не пропустить.",follow:"Подписаться на @hypeshopexpress"},
-en:{pill:"iPhone 18 Pro Max · iPhone 17 Pro Max",h1:"The hype, <em>before everyone else</em>",lead:"A case with a rear touchscreen that mirrors your iPhone display. Shoot selfies on the main camera and see yourself in the frame.",cta1:"Message us on Instagram",cta2:"See the cases",
-e1:"In stock",t1:"Rear-screen case",d1:"Two models, two colours. Both in stock in Baku.",stock:"In stock",f1s:"Rear touchscreen",f2s:"Main-camera selfies",f3s:"Magnetic LED · 3 modes",f4s:"Mirror button",order:"Order now",
+en:{pill:"iPhone 18 Pro Max · iPhone 17 Pro Max",h1:"The hype, <em>before everyone else</em>",lead:"A case with a rear touchscreen that mirrors your iPhone display. Shoot selfies on the main camera and see yourself in the frame.",cta1:"Message on WhatsApp",ctaDm:"DM on Instagram",cta2:"See the cases",
+e1:"In stock",t1:"Rear-screen case",d1:"Two models, two colours. Both in stock in Baku.",stock:"In stock",f1s:"Rear touchscreen",f2s:"Main-camera selfies",f3s:"Magnetic LED · 3 modes",f4s:"Mirror button",order:"Order on WhatsApp",
 e2:"Features",t2:"All in one case",f1:"Rear touchscreen",f1d:"Your iPhone screen is mirrored on the back: control it and see the shot.",f2:"Main-camera selfies",f2d:"Skip the front camera and use the best one — the quality difference is instant.",f3:"Magnetic LED light",f3d:"3 light modes. Sharp shots even at night.",f4:"Mirror button",f4d:"One tap turns the rear screen into a mirror.",
 e3:"On video",t3:"See how it works",d3:"The iPhone screen on the back, magnetic LED and mirror mode — in 25 seconds.",more:"More on Instagram",
-e4:"Ordering",t4:"How to order",s1:"Pick your model",s1d:"iPhone 18 Pro Max in Burgundy or iPhone 17 Pro Max in Cosmic Orange.",s2:"Send us a DM",s2d:"Message the model to @hypeshopexpress — we reply with the price right away.",s3:"Confirm the order",s3d:"We agree the details and get the case to you.",
+e4:"Ordering",t4:"How to order",s1:"Pick your model",s1d:"iPhone 18 Pro Max in Burgundy or iPhone 17 Pro Max in Cosmic Orange.",s2:"Message us on WhatsApp or DM",s2d:"Send the model to +994 55 353 62 12 or @hypeshopexpress — we reply with the price right away.",s3:"Confirm the order",s3d:"We agree the details and get the case to you.",
 e5:"Coming soon",t5:"New products are on the way",d5:"At Hype Shop, trending gadgets and accessories land before they reach the shops. Follow so you don't miss them.",follow:"Follow @hypeshopexpress"}};
 const META={az:document.title,ru:"Hype Shop — чехлы с экраном сзади для iPhone | Баку",en:"Hype Shop — rear-screen iPhone cases | Baku"};
 T.az={};document.querySelectorAll("[data-i]").forEach(e=>{T.az[e.dataset.i]=e.innerHTML});
@@ -241,7 +244,10 @@ function render(){document.documentElement.lang=lang;document.title=META[lang];
  document.querySelectorAll("[data-i]").forEach(e=>{const v=T[lang][e.dataset.i];if(v!=null)e.innerHTML=v});
  document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang))}
 document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("hs-lang",lang)}catch(e){}render()}));
-if(lang!=="az")render();
+const WAT={az:["Salam! Hype Shop saytından yazıram.","Salam! Bu keys maraqlıdır: "],ru:["Здравствуйте! Пишу с сайта Hype Shop.","Здравствуйте! Интересует чехол: "],en:["Hi! I'm writing from the Hype Shop website.","Hi! I'm interested in this case: "]};
+function waLinks(){document.querySelectorAll("[data-wa]").forEach(a=>{const m=a.dataset.wa;a.href="https://wa.me/994553536212?text="+encodeURIComponent(m?WAT[lang][1]+m:WAT[lang][0])})}
+const _r=render;render=function(){_r();waLinks()};
+render();
 </script>
 </body>
 </html>
